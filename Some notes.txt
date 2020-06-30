@@ -1,0 +1,139 @@
+1- When designing the website , take a good look on what is being repeated 
+
+2- For icons , Font awesome Library
+
+3-box-sizing : border-box             : means the padding and border doesn't add to the width of the box 
+                                            instead it takes from the original width(CSS3)
+
+
+4-<img src="" alt=""  draggable="false"      : to prevent people from dragging the img 
+
+
+5-U can fix float problem by adding property overflow:hidden to the container 
+    BUT CAREFUL , U CAN't MAKE A DROPDOWN MENU BEC IT WILL BE HIDDEN
+
+
+6-To add padding for the nav items , add it to the <a> not to the <li> so the user can click anywhere around
+    the item name to go to the link 
+
+
+
+7-If u want to put text on an image , its better to use background-image
+    CSS images (background image) cant be saved by the user (save as)
+    while html images(<img>) can be saved by user (save as)
+
+
+
+8-Its better to name the classes of  childs a little bit similar to parents
+    ex: parent(class="home")   , child(class="home-content")
+
+
+9-It's better to assign every element to a specific class
+
+
+10-It's better to write the every html content in small cases then capitalize in css as u like 
+
+11-background-size:cover           (VI) : fit the background photo to the container 
+
+
+12-Instead of making :   background-color:black;
+                         opacity:0.7
+
+    -we can use this    background-color:rgba(0,0,0,0.7)
+    the (a) in (rgba) stands for ALPHA which is the opacity
+
+
+13-If u make the overlay in an individual div , then u code the rest of the home elements after it , it will
+    overlay the content and u CAN'T SELECT THE TEXT INSIDE THE home CLASS  
+    so u have to put the rest of home elements inside the overlay as a child to it
+
+
+
+14-border-radius:5px                    : makes an incline in the tip of the boxes 
+    
+ - cursor:pointer                       :makes the mouse points like it's a link
+
+
+ 15-You can create properties in css for an imaginary class u just created and then u assign each element
+    u want the styles to be applied to this class
+
+
+16-If u have certain style for hover effect to class (hover-effect:hover)
+    to adjust the timing of that effect :
+            hover-effect{
+                transition:.5s                      : on the parent not the hover
+            }
+            -but the transition will be applied on all properties of the element(font , color , width , etc)
+            -to fix do this instead :
+                hover-effect{
+                    transition: opacity .5s
+                }
+
+
+
+17-position fixed and absolute transform elements from block to inline-block
+
+
+
+18- in dropdowns and any effect on hover includes the opacity, use both visibility:hidden and opacity:0 
+    bec visibility only makes it ugly af 
+    opacity only will keep the position but its hidden so when u put the mouse near it it will become pointer
+    -It fixes the bug when u reload , the effect happens
+
+
+19-Note my discovery : When u make a dropdown , make it work when u hover over the li containing both the 
+    <a> the user hover over and the dropdown-menu so when u hover over the dropdown-menu it wont disappear
+    -don't make it work only when the user hover over the <a>
+
+
+20-U can remove outline:none from buttons , input so it won't make an outline when u press it 
+
+
+
+21-When making overlay there are 2 ways : 
+    (1)Making a div next to the content(siblings) , with class overlay , then make it take whole screen and set 
+        z-index:0; so it won't take over the content 
+
+    (2) Make a div with class overlay and then put the content inside it as CHILD to it , then make z-index:0
+
+
+22-My discovery : Always add the parent class name or the element itself when typing any selector , so u 
+    know which is this selector's parent
+
+
+23-Install extension called (Page Ruler) ON CHROME , it calculates the measurements of elements in site
+
+
+24-To adjust size of icons in font-awesome set class (fa-2x , fa-3x , etc..) to the icon element
+        -or(fa-lg) means large  , (fa-fw) fixed width
+
+
+25-alt+click to select more than 1 position to write same thing 
+    -ctrl+d  select similar text
+
+26-u can add padding by adding extra element just to assign padding to it
+
+
+27- u can fit child block to parent by :
+    -width:100%;
+     height:100%;
+
+     -top:0;
+      left:0;
+      right:0;
+      bottom:0;             (Only when child is absolute and parent relative)
+
+
+
+28-When u set line-height to a value equal to the height of the block , it centers it 
+
+
+
+29-check codepen website to learn from other people codes
+
+30-ctrl+f : search by keyword
+
+31-U can take each section's css and put it in another file then link it to the html 
+    - It's better if u are gonna reuse the same style in another file and it makes it easier 
+    to modify the current sections if u want
+    -This method is called (divide and conquer)
